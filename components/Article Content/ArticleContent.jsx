@@ -23,7 +23,7 @@ import Image from 'next/image';
 
 const articleData = [
   {
-    "id": 1,
+    "id": 0,
     "title": "Unveiling the Future: Artificial Intelligence in Everyday Life",
     "author": "Emily Chen",
     "profile": author1,
@@ -39,7 +39,7 @@ const articleData = [
     In conclusion, artificial intelligence is poised to revolutionize virtually every aspect of our lives, from healthcare and finance to transportation and environmental sustainability. By harnessing its transformative power responsibly, we can leverage AI to address some of humanity's most pressing challenges and usher in a new era of innovation and progress.`,
   },
   {
-    "id": 2,
+    "id": 1,
     "title": "The Rise of Virtual Reality: Shaping the Future of Technology",
     "author": "Sarah Thompson",
     "profile": author2,
@@ -53,7 +53,7 @@ const articleData = [
     In conclusion, the rise of virtual reality represents a paradigm shift in the world of technology, offering boundless opportunities for innovation and growth. As VR continues to permeate various aspects of our lives, it is clear that we are only beginning to scratch the surface of its transformative potential.`,
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "The Future of Renewable Energy: Innovations and Challenges",
     "author": "Maria Rodriguez",
     "profile": author3,
@@ -67,7 +67,7 @@ const articleData = [
     In conclusion, the future of renewable energy is bright, with innovative technologies and ambitious goals driving the transition towards a cleaner, more sustainable energy system. By investing in renewable energy infrastructure and embracing new technologies, we can reduce our dependence on fossil fuels, mitigate climate change, and create a more resilient and equitable energy future for generations to come.`,
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "The Role of Blockchain in Supply Chain Management",
     "author": "Daniel Johnson",
     "profile": author4,
@@ -81,7 +81,7 @@ const articleData = [
     Despite its potential benefits, the adoption of blockchain technology in supply chain management is still in its early stages. Challenges such as scalability, interoperability, and regulatory uncertainty remain obstacles to widespread implementation. However, as companies continue to explore and experiment with blockchain solutions, the technology is poised to revolutionize the way we manage and optimize supply chains in the digital age.`,
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Cybersecurity Trends for 2024: Protecting Against Emerging Threats",
     "author": "Erwin Smith",
     "profile": author5,
@@ -97,7 +97,7 @@ const articleData = [
     In conclusion, as we navigate the ever-changing landscape of cybersecurity in 2024, organizations must remain vigilant and proactive in defending against emerging threats. By staying abreast of the latest cybersecurity trends and adopting a multi-layered approach to security, organizations can strengthen their defenses and protect against the evolving tactics of cybercriminals. By prioritizing cybersecurity as a core component of their operations, businesses can safeguard sensitive data, preserve customer trust, and maintain a competitive edge in an increasingly digital world.`,
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "The Internet of Things: Connecting Devices for a Smarter World",
     "author": "Samantha Lee",
     "profile": author6,
@@ -113,7 +113,7 @@ const articleData = [
     In conclusion, the Internet of Things holds immense potential to transform our world by connecting devices, gathering data, and enabling intelligent decision-making across industries and sectors. By leveraging IoT technologies responsibly and addressing security and privacy concerns proactively, we can harness the power of connectivity to create a smarter, more efficient, and sustainable future for generations to come.`,
   },
   {
-    "id": 7,
+    "id": 6,
     "title": "Space Exploration Technology: Pushing the Boundaries of Discovery",
     "author": "David Rodriguez",
     "profile": author7,
@@ -128,7 +128,7 @@ const articleData = [
     As we look to the future, the possibilities for space exploration technology are boundless. From the prospect of mining asteroids for precious resources to the search for habitable exoplanets orbiting distant stars, humanity stands on the cusp of unprecedented discoveries and achievements in the realm of space exploration. By harnessing the power of innovation, collaboration, and determination, we can continue to push the boundaries of discovery, unlocking the mysteries of the cosmos and inspiring future generations to reach for the stars.`,
   },
   {
-    "id": 8,
+    "id": 7,
     title: "E-commerce Innovations: Redefining the Future of Online Shopping",
     author: "Rachel Thompson",
     profile: author8,
@@ -143,7 +143,7 @@ const articleData = [
     In conclusion, e-commerce innovations are revolutionizing the retail industry, offering consumers unprecedented convenience, personalization, and flexibility in their shopping experiences. From augmented reality and artificial intelligence to mobile commerce and blockchain technology, the future of online shopping is bright with possibilities. By embracing these advancements and staying ahead of the curve, businesses can position themselves for success in the ever-evolving world of e-commerce.`,
   },
   {
-    "id": 9,
+    "id": 8,
     "title": "Big Data Analytics: Leveraging Insights for Business Success",
     "author": "Michael Lee",
     "profile": author9,
