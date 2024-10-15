@@ -1,0 +1,120 @@
+@mixin media($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin navbar-styles($bg-color, $text-color) {
+  background-color: $bg-color !important;
+  color: $text-color;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+  border: none !important;
+  padding: 0 !important;
+  font-size: 18px;
+  margin: 0 !important;
+}
+
+@mixin collapsed-nav-styles($bg-color) {
+  position: absolute;
+  top: -500px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: $bg-color;
+  box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70);
+  text-align: left;
+  transition: 0.2s ease;
+  align-items: start;
+}
+
+$navbar-bg-color: white;
+$navbar-text-color: black;
+$navbar-shadow-color: rgba(149, 157, 165, 0.2);
+$collapsed-nav-bg: #d7dff7;
+$primary-color: #60b3d1;
+$secondary-color: #012641;
+
+.navbarContainer {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  @include navbar-styles($navbar-bg-color, $navbar-text-color);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  @include navbar-styles($navbar-bg-color, $navbar-text-color);
+  padding: 5px 4% !important;
+  border-radius: 0 !important;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  @include media(830px) {
+    @include collapsed-nav-styles($collapsed-nav-bg);
+  }
+}
+
+.item {
+  color: $navbar-text-color;
+  font-size: 17px;
+  font-weight: bold !important;
+}
+
+.item:hover {
+  color: $primary-color !important;
+}
+
+.span1,
+.span2 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.span1 {
+  color: $secondary-color;
+}
+
+.span2 {
+  color: $primary-color;
+}
+
+.active.item {
+  font-weight: bold;
+  color: $primary-color;
+  background: $navbar-bg-color;
+}
+
+.anchor {
+  display: flex;
+  align-items: center;
+}
+
+.menuicon {
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+  font-size: 28px;
+
+  @include media(830px) {
+    display: block;
+  }
+}
+
+@media (max-width: 830px) {
+  .navList a {
+    display: block;
+    border-left: 0;
+    border-radius: 5px;
+    display: block;
+  }
+
+  .navList.active {
+    top: 100%;
+  }
+}

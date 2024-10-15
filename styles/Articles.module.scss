@@ -1,0 +1,230 @@
+$padding-large: 150px !important;
+$padding-small: 100px !important;
+
+@mixin padding-large {
+  padding: $padding-large;
+
+  @media (max-width: 1430px) {
+    padding: $padding-small;
+  }
+
+  @media (max-width: 1020px) {
+    padding: 50px $padding-small;
+  }
+
+  @media (max-width: 830px) {
+    padding: 50px 50px !important;
+  }
+
+  @media (max-width: 600px) {
+    padding: 50px 30px !important;
+  }
+}
+
+.articleContainer {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 10px 10px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  box-shadow: none;
+  border: none;
+  width: 100% !important;
+
+  h1 {
+    margin-bottom: 30px !important;
+    font-size: 28px !important;
+    text-align: left !important;
+  }
+
+  .item {
+    margin-bottom: 40px !important;
+    align-items: center !important;
+
+    @media (max-width: 600px) {
+      margin-top: 20px !important;
+    }
+  }
+
+  .itemContent {
+    padding-top: 35px !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .itemDescription {
+    max-width: 60rem !important;
+    font-size: 16px !important;
+  }
+
+  .articleGrid {
+    @include padding-large;
+  }
+
+  .tag {
+    color: #2596be;
+  }
+
+  .authorDate {
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+
+  .date {
+    font-size: 15px !important;
+  }
+
+  .itemImage {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 250px;
+    height: 207px;
+    margin-top: 20px;
+
+    @media (max-width: 767px) {
+      width: 100% !important;
+    }
+  }
+
+  .articleExtra {
+    border-top: none !important;
+  }
+
+  .card {
+    width: 270px !important;
+    margin-right: 20px !important;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px !important;
+    border-radius: 20px !important;
+    padding-bottom: 10px !important;
+    transition: transform 0.2s !important;
+
+    @media (max-width: 830px) {
+      width: 100% !important;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  .articleImage {
+    object-fit: cover !important;
+    width: 270px !important;
+    height: 270px !important;
+    border-radius: 20px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    background-color: transparent !important;
+
+    @media (max-width: 830px) {
+      width: 100% !important;
+    }
+  }
+
+  .itemMeta {
+    font-size: 16px !important;
+  }
+
+  .articleHeader {
+    font-size: 20px !important;
+    line-height: 25px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .articleDescription {
+    font-size: 16px !important;
+  }
+
+  .featuredImg {
+    border-radius: 20px;
+    width: 100%;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .right {
+    display: flex !important;
+   
+  }
+
+  .popularDiv {
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    padding: 0px 150px !important;
+
+    @media (max-width: 1020px) {
+      padding: 12px 50px !important;
+    }
+
+    @media (max-width: 830px) {
+      padding: 12px 30px !important;
+    }
+
+    .popularHeader {
+      margin-bottom: 30px !important;
+      margin-left: -80% !important;
+
+      @media (max-width: 1020px) {
+        margin-left: -75% !important;
+      }
+
+      @media (max-width: 830px) {
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  .moreArticles {
+    width: 100% !important;
+    padding-top: 0px;
+    padding-right: $padding-large;
+    padding-bottom: 0px;
+    padding-left: $padding-large;
+
+    @media (max-width: 1020px) {
+      padding: 0px 50px !important;
+    }
+
+    @media (max-width: 830px) {
+      padding: 12px 30px !important;
+    }
+  }
+
+  .gridRow {
+    margin-bottom: 20px !important;
+
+    @media (max-width: 830px) {
+      flex-direction: column !important;
+    }
+  }
+
+  .itemTitle {
+    line-height: 25px;
+  }
+
+  .itemContent {
+    padding: 27px 0px 0px 20px !important;
+  }
+
+  .articleContainer {
+    padding: 0px !important;
+  }
+
+  .moreArticles,
+  .popularDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .itemHeader {
+    margin-bottom: 0px !important;
+    margin-left: -80% !important;
+    @media (max-width: 830px) {
+      margin-left: 0 !important;
+    }
+  }
+}

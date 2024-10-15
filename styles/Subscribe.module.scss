@@ -1,0 +1,106 @@
+$subscribe-bg-color: #f5f5f5;
+$subscribe-border-radius: 10px;
+$subscribe-padding: 30px !important;
+$subscribe-margin-bottom: 80px;
+$input-width: 300px !important;
+$input-height: 47px !important;
+$input-font-size: 15px !important;
+$h2-font-size: 16px;
+$h2-font-weight: 300;
+$h2-letter-spacing: 2px;
+$updates-font-size: 20px;
+$updates-max-width: 400px;
+$button-height: 40px !important;
+$button-font-weight: 400 !important;
+$button-font-size: 15px;
+
+@mixin media($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+.subscribeContainer {
+  background-color: $subscribe-bg-color;
+  border-radius: $subscribe-border-radius;
+  padding: $subscribe-padding;
+  margin-bottom: $subscribe-margin-bottom;
+}
+
+.subscribeForm {
+  margin-top: 50px !important;
+  display: inline-block;
+
+  @include media(600px) {
+    margin-top: -30px !important;
+    margin-left: 10px !important;
+  }
+}
+
+.inputField {
+  width: $input-width;
+  height: $input-height;
+  margin-top: 10px !important;
+  font-size: $input-font-size;
+}
+
+.h2 {
+  font-size: $h2-font-size;
+  font-weight: $h2-font-weight;
+  letter-spacing: $h2-letter-spacing;
+}
+
+.updates {
+  font-size: $updates-font-size;
+  max-width: $updates-max-width;
+  font-weight: 500;
+}
+
+.subBtn {
+  height: $button-height;
+  font-weight: $button-font-weight !important;
+  font-size: $button-font-size;
+  margin-top: 10px !important;
+
+  @include media(1276px) {
+    margin-left: 10px !important;
+  }
+}
+
+.leftSide {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.contact {
+  @include media(1430px) {
+    padding: 14px 100px !important;
+  }
+
+  @include media(830px) {
+    padding: 50px 100px !important;
+  }
+}
+
+@media (max-width: 1276px) {
+  .subscribeForm {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1020px) {
+  .inputField {
+    width: 200px !important;
+  }
+}
+
+@media (max-width: 830px) {
+  .subBtn {
+    margin-top: 10px !important;
+  }
+
+  .subscribeContainer {
+    padding: 20px 10px !important;
+  }
+}

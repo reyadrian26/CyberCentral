@@ -1,0 +1,116 @@
+$article-padding-large: 300px !important;
+$article-padding-small: 30px 200px 80px !important;
+$article-padding-mobile: 30px 50px 80px !important;
+
+@mixin article-padding {
+  padding: $article-padding-large;
+  padding-bottom: 80px !important;
+  padding-top: 30px !important;
+
+  @media (max-width: 1430px) {
+    padding: $article-padding-small;
+
+    .authorDetails {
+      margin-bottom: 20px !important;
+    }
+  }
+
+  @media (max-width: 1276px) {
+    padding: 30px 100px 80px !important;
+  }
+
+  @media (max-width: 1020px) {
+    padding: 30px 100px 80px !important;
+  }
+
+  @media (max-width: 830px) {
+    padding: $article-padding-mobile;
+  }
+}
+
+.articleContent {
+  margin-top: 100px !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  @include article-padding;
+
+  .authorImage {
+    border-radius: 20px !important;
+    width: 60px !important;
+    height: auto !important;
+  }
+
+  .articleHeader {
+    margin-bottom: 30px !important;
+    text-align: left !important;
+    font-size: 38px !important;
+  }
+
+  .authorRight {
+    padding-left: 0px !important;
+  }
+
+  .authorLeft {
+    padding-left: 40px !important;
+    padding-right: 0px !important;
+  }
+
+  .pAuthor {
+    margin-bottom: 0px !important;
+  }
+
+  .gray {
+    color: gray !important;
+    font-weight: 300 !important;
+  }
+
+  .articleText {
+    margin-top: 40px !important;
+    margin-bottom: 30px !important;
+    font-weight: 300 !important;
+    font-family: "Quicksand", sans-serif !important;
+    line-height: 3rem !important;
+    padding-left: 15px !important;
+
+    @media (max-width: 600px) {
+      p {
+        padding: 0px !important;
+      }
+    }
+  }
+
+  .articleImage {
+    border-radius: 15px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .imageContainer {
+    display: flex !important;
+    justify-content: center !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0px !important;
+  }
+
+  .authorDetails {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0px !important;
+  }
+
+  @media (max-width: 830px) {
+    .articleHeader {
+      font-size: 30px !important;
+    }
+  }
+
+  @media (max-width: 795px) {
+    .authorLeft {
+      padding-left: 0px !important;
+      padding-right: 5px !important;
+    }
+  }
+}

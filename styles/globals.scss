@@ -1,0 +1,109 @@
+@mixin font-settings($font-family, $font-size) {
+  font-family: $font-family !important;
+  font-size: $font-size;
+}
+
+@mixin media($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+$font-family: "Lexend", sans-serif;
+$font-size: 18px;
+$input-width: 280px;
+$input-margin-top: 0px;
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  @include font-settings($font-family, $font-size);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+svg:not(:root).svg-inline--fa,
+svg:not(:host).svg-inline--fa {
+  margin-left: 10px !important;
+}
+
+.ui.segment {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 1430px) {
+  .ui.card > .extra a:not(.ui),
+  .ui.cards > .card > .extra a:not(.ui) {
+    font-size: 16px;
+  }
+
+  .ui.cards {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1276px) {
+  .ui.grid > .row {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 830px) {
+  .ui.menu:not(.vertical) > .menu {
+    padding-right: 60% !important;
+  }
+
+  .ui.menu:not(.vertical) .right.item,
+  .ui.menu:not(.vertical) .right.menu {
+    align-items: flex-start !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .ui[class*="two column"].grid>.row>.column {
+    width: 100% !important;
+    margin-top: 30px !important;
+  }
+
+  h1:first-child {
+    text-align: center;
+  }
+}
+
+@media (max-width: 795px) {
+  .ui.vertical.segment {
+    padding: 50px 100px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .ui.items:last-child {
+    padding: 20px 30px !important;
+  }
+
+  .popularDiv {
+    padding-bottom: 0px;
+  }
+
+  .ui.items:not(.unstackable) > .item {
+    width: 100%;
+  }
+
+  .ui.vertical.segment {
+    padding: 20px 50px !important;
+  }
+
+  .ui.form .field .ui.input input,
+  .ui.form .fields .field .ui.input input {
+    width: $input-width !important;
+    margin-top: $input-margin-top;
+  }
+
+  .ui.menu:not(.vertical) > .menu {
+    padding-right: 30% !important;
+  }
+}

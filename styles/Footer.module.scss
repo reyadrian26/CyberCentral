@@ -1,0 +1,50 @@
+$footer-padding: 30px !important;
+$anchor-color: rgba(187, 187, 187, 0.803);
+
+@mixin footer-padding {
+  padding: $footer-padding;
+}
+
+.pFooter {
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  color: $anchor-color !important;
+}
+
+.myHeading {
+  font-size: 16px !important;
+}
+
+.footer {
+  @include footer-padding;
+
+  &Links {
+    padding-left: 0;
+  }
+}
+
+.anchor {
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  color: $anchor-color;
+}
+
+.li {
+  list-style: none;
+}
+
+.socials {
+  a {
+    color: $anchor-color;
+
+    &:hover {
+      color: #4183c4;
+    }
+  }
+
+  .socialsIcon {
+    margin-left: 10px; 
+  }
+}
