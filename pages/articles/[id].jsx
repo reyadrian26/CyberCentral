@@ -1,31 +1,33 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import ArticleContent from "../../components/Article Content/ArticleContent";
 import Footer from "../../components/Footer/Footer";
 import Subscribe from "../../components/Subscribe/Subscribe";
-import { useRouter } from "next/router"; 
-import { articleData } from "../../components/Article Content/ArticleContent"; 
+import { articleData } from "../../components/Article Content/ArticleContent";
 
-const ContentPage = ({ articleData }) => {
-  const router = useRouter(); 
-  const { id } = router.query;
-  
+const ContentPage = ({ article }) => {
   return (
     <>
       <Navbar />
-      <ArticleContent articleData={articleData} articleId={id} />{" "}
+      <ArticleContent articleData={article} articleId={article.id} />
       <Subscribe />
       <Footer />
     </>
   );
 };
 
+export async function getStaticPaths() {
+  const paths = articleData.map((article) => ({
+    params: { id: article.id.toString() },
+  }));
+  return { paths, fallback: false };
+}
 
-export async function getServerSideProps() {
- 
+export async function getStaticProps({ params }) {
+  const article = articleData.find((art) => art.id.toString() === params.id);
   return {
     props: {
-      articleData, 
+      article,
     },
   };
 }
